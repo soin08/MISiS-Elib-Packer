@@ -1,0 +1,7 @@
+beautifulsoup4==4.3.2
+jedi==0.9.0
+MechanicalSoup==0.3.1
+Pillow==2.8.1
+reportlab==3.1.44
+requests==2.7.0
+six==1.9.0
