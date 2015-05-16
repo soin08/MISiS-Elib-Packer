@@ -1,19 +1,21 @@
-import argparse
+import getpass
 import packer as p
 
-parser = argparse.ArgumentParser(description='Вход в библиотеку МИСиС')
-parser.add_argument('username')
-parser.add_argument('password')
-parser.add_argument('book_id')
-args = parser.parse_args()
+
 
 packer = p.Packer()
 
+print('Входим в библиотеку МИСиС')
+username = input("логин--> ")
+password = getpass.getpass("пароль--> ")
+book_id = input("id книги--> ")
+print('входим...')
+
 try:
-    print('входим...')
-    packer.login(args.username, args.password)
+    packer.login(username, password)
     print('собираем pdf (относительно долгий процесс)...')
-    packer.save_book(args.book_id)
+    packer.save_book(book_id)
+    print('готово!')
 
 except p.Packer_LoginError:
     print('Неправильный логин / пароль')
