@@ -2,7 +2,6 @@ import getpass
 import packer as p
 
 
-
 packer = p.Packer()
 
 print('Входим в библиотеку МИСиС')
